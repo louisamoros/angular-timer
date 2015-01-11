@@ -1,5 +1,5 @@
 {
-  "name": "angular-timer",
+  "name": "angularjs-timer",
   "version": "1.0.0",
   "authors": {
     "name": "Louis Amoros",
@@ -13,6 +13,7 @@
   "description": "Simple AngularJs timer service and directive. Easy to use.",
   "main": "directive.js",
   "keywords": [
+    "angularjs-timer",
     "angular-timer",
     "angular",
     "timer",
