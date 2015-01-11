@@ -2,6 +2,23 @@
 
 angular
   .module('timer-angular', [])
+    .directive(
+        'ngTimer', 
+        function () {
+            return {
+                restrict: 'AEC',
+                scope: {
+                    count: '=',
+                    format: '='
+                },
+/*                templateUrl: '/template/timer.html',*/
+                template: '<h3>{{count}}</h3>',
+                link: function(scope, element, attrs, controller) {
+                    
+                }
+            }
+        }
+    )
     .service(
         "timer",
         function( $interval ) {

@@ -2,16 +2,18 @@
 
 angular
   .module('timer-angular', [])
-    .directive('timer', function () {
+    .directive('ngTimer', function () {
     return {
-    	restrict: 'E',
+    	restrict: 'AEC',
     	scope: {
-    		shape: '='
+    		count: '=',
+            format: '='
     	},
-    	/*templateUrl: 'template/timer.html',*/
+/*    	templateUrl: '../template/timer.html',*/
         template: '<div>this is a timer</div>',
     	link: function(scope, element, attrs, controller) {
-    		console.log('test');
+    		console.log('hello');
+            console.log(scope)
     	}
     }
 });
