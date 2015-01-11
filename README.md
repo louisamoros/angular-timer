@@ -6,3 +6,9 @@
 ```shell
 bower install angular-...
 ```
+
+## Usage
+Nothing yet
+
+## Example
+Nothing yet [`example.html`](http://louisamoros.github.io)
