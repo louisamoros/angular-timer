@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/louisamoros/angular-timer.git"
-  }
+  },
   "description": "Simple AngularJs timer service and directive. Easy to use.",
   "main": "directive.js",
   "keywords": [
@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "angular": "^1.3.0"
-  } 
+  }, 
   "license": "MIT",
   "ignore": [
     "**/.*",
