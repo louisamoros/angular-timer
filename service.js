@@ -11,9 +11,6 @@ angular
             function Timer( invokeApply ) {
                 //Store properties 
                 this._invokeApply = ( invokeApply !== false );
-                // I hold the $timeout promise. This will only be non-null when the
-                // timer is actively counting down to callback invocation.
-                this._timer = null;
                 this._count = 0;
             }
 
@@ -22,12 +19,6 @@ angular
 
                 // Set constructor to help with instanceof operations.
                 constructor: Timer,
-
-                // I determine if the timer is currently counting down.
-                isActive: function() {
-                    return( !! this._timer );
-                },
-
 
                 // I reset the timer, then start the timer again.
                 restart: function() {
@@ -49,7 +40,7 @@ angular
                         function count() {
                             self._count++;
                         },
-                        1000,
+                        1,
                         0,
                         this._invokeApply
                     );
@@ -58,7 +49,6 @@ angular
                 // I stop the current timer, if it is running.
                 stop: function() {
                     $interval.cancel( this._timer );
-                    this._timer = false;
                 },
             };
 
