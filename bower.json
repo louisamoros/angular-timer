@@ -1,13 +1,23 @@
 {
-  "name": "angular-timer.github.io",
+  "name": "angular-timer",
   "version": "1.0.0",
-  "authors": [
-    "Louis Amoros <amoros.louis@gmail.com>"
-  ],
+  "authors": {
+    "name": "Louis Amoros",
+    "email": "amoros.louis@gmail.com",
+    "homepage": "http://louisamoros.github.io" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/louisamoros/angular-timer.git"
+  }
   "description": "Simple AngularJs timer service and directive. Easy to use.",
   "main": "directive.js",
   "keywords": [
-    "angular-timer"
+    "angular-timer",
+    "angular",
+    "timer",
+    "timer-directive",
+    "timer-service"
   ],
   "dependencies": {
     "angular": "^1.3.0"
