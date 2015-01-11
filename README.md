@@ -4,7 +4,7 @@
 ## Install
 
 ```shell
-bower install angular-...
+bower install louisamoros/angular-timer
 ```
 
 ## Usage
