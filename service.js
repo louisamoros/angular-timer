@@ -23,12 +23,13 @@ angular
         "timer",
         function( $interval ) {
 
-            // I provide a simple wrapper around the core $timeout that allows for
+            // Provide a simple wrapper around the core $timeout that allows for
             // the timer to be easily reset.
             function Timer( invokeApply ) {
                 //Store properties 
                 this._invokeApply = ( invokeApply !== false );
                 this._count = 0;
+                this._running = false;
             }
 
             // Define the instance methods.
@@ -37,35 +38,39 @@ angular
                 // Set constructor to help with instanceof operations.
                 constructor: Timer,
 
-                // I reset the timer, then start the timer again.
+                // Reset the timer, then start the timer again.
                 restart: function() {
                     this.reset();
                     this.start();
                 },
 
-                // I stop (if it is running) and put the counter to 0.
+                // Stop (if it is running) and put the counter to 0.
                 reset: function() {
                     this.stop();
                     this._count = 0;
                 },
 
-                // I start the timer, which will invoke the callback upon timeout.
+                // Start the timer.
                 start: function() {
                     var self = this;
                     // See $interval angular service documentation
-                    this._timer = $interval(
-                        function count() {
-                            self._count++;
-                        },
-                        1,
-                        0,
-                        this._invokeApply
-                    );
+                    if ( !this._running ) {
+                        this._timer = $interval(
+                            function count() {
+                                self._count++;
+                            },
+                            1000,
+                            0,
+                            this._invokeApply
+                        );
+                        this._running = true;
+                    }
                 },
 
-                // I stop the current timer, if it is running.
+                // stop the current timer, if it is running.
                 stop: function() {
                     $interval.cancel( this._timer );
+                    this._running = false;
                 },
             };
 
