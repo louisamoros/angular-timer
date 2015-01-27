@@ -7,11 +7,15 @@
   <meta name="description" content="Angularjs-timer : Work in progress - AngularJS Timer - http://louisamoros.github.io/angular-timer">
 
   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
   <title>Angularjs-timer</title>
 </head>
 
-<body>
+<body ng-app="angularjsTimerExample">
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
   <!-- HEADER -->
   <div id="header_wrap" class="outer">
@@ -22,11 +26,13 @@
       <h2 id="project_tagline">Work in progress - AngularJS Timer - http://louisamoros.github.io/angular-timer</h2>
 
       <section id="downloads">
-        <a class="zip_download_link" href="https://github.com/louisamoros/angularjs-timer/zipball/master">Download this project as a .zip file</a>
         <a class="tar_download_link" href="https://github.com/louisamoros/angularjs-timer/tarball/master">Download this project as a tar.gz file</a>
+        <a class="zip_download_link" href="https://github.com/louisamoros/angularjs-timer/zipball/master">Download this project as a .zip file</a>
       </section>
     </header>
   </div>
+
+
 
   <!-- MAIN CONTENT -->
   <div id="main_content_wrap" class="outer">
@@ -35,14 +41,14 @@
       <p>Here goes different ways to install...</p>
 
       <h3>Examples</h3>
-      <p>Here goes different examples to show how to use.</p>
+      <div ng-view=""></div>
     </section>
   </div>
 
   <!-- FOOTER  -->
   <div id="footer_wrap" class="outer">
     <footer class="inner">
-      <p class="copyright">Angularjs-timer maintained by <a href="https://github.com/louisamoros">louisamoros</a></p>
+      <p class="copyright">Angularjs-timer maintained by <a href="https://github.com/louisamoros">Louis Amoros</a></p>
       <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
     </footer>
   </div>
@@ -58,6 +64,18 @@
   } catch(err) {}
   </script>
 
+  <!-- bower_components -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <!-- angularjs-timer -->
+  <script src="app/angularjs-timer-directive.js"></script>
+  <script src="app/angularjs-timer-service.js"></script>
+
+  <!-- examples scripts -->
+  <script src="examples/scripts/app.js"></script>
+  <script src="examples/scripts/controllers/MainController.js"></script>
+  <script src="examples/scripts/controllers/ExamplesController.js"></script>
 
 </body>
 </html>

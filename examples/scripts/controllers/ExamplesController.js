@@ -4,6 +4,6 @@
  * # ExamplesController
  * Controller of the angularApp
  */
-angular.module('angularApp')
+angular.module('angularjsTimerExample')
   .controller('ExamplesController', function ($scope) {
   });

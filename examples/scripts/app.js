@@ -6,21 +6,17 @@
  * Main module of the application.
  */
  angular
- .module('angularApp', [
+ .module('angularjsTimerExample', [
     'ngRoute',
     'angularjs-timer-service',
     'angularjs-timer-directive'
     ]).
  config(['$routeProvider',function($routeProvider) {
-    $routeProvider.when("/examples", {
-       templateUrl: "examples/views/examples.html",
-       controller: "ExamplesController"
-    });
-    $routeProvider.when("/home", {
+    $routeProvider.when("/", {
        templateUrl: "examples/views/main.html",
        controller: "MainController"
     });
     $routeProvider.otherwise({
-        redirectTo: '/home'
+        redirectTo: '/'
     });
 }])
