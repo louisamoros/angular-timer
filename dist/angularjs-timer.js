@@ -1,5 +1,5 @@
 /**
- * angularjs-timer - v0.0.0 - 2015-01-18 5:23 PM
+ * angularjs-timer - v0.0.0 - 2015-01-26 8:26 PM
  * https://github.com/louisamoros/angular-timer
  *
  * Copyright (c) 2015 Louis Amoros
