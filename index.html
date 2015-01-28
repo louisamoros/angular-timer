@@ -37,10 +37,16 @@
   <!-- MAIN CONTENT -->
   <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
-      <h3>Install</h3>
+      <h3>How to install</h3>
       <p>Here goes different ways to install...</p>
+      Examples:
+      <ul>
+        <li><a ng-href="#/">timer</a></li>
+        <li><a ng-href="#/timers">timers</a></li>
+        <li><a ng-href="#/countdown">countdown</a></li>
+      </ul>
 
-      <h3>Examples</h3>
+      <h3>How to use</h3>
       <div ng-view=""></div>
     </section>
   </div>
@@ -73,9 +79,10 @@
   <script src="app/angularjs-timer-service.js"></script>
 
   <!-- examples scripts -->
-  <script src="examples/scripts/app.js"></script>
-  <script src="examples/scripts/controllers/MainController.js"></script>
-  <script src="examples/scripts/controllers/ExamplesController.js"></script>
+  <script src="examples/app.js"></script>
+  <script src="examples/timer/TimerController.js"></script>
+  <script src="examples/timers/TimersController.js"></script>
+  <script src="examples/countdown/CountdownController.js"></script>
 
 </body>
 </html>

@@ -11,7 +11,7 @@ angular
         count: '=',
         format: '='
       },
-      template: '<h3>{{count}}</h3>',
+      template: '<div style="font-size:25px;">{{count}}</div>',
       link: function(scope, element, attrs, controller) {
 
       }

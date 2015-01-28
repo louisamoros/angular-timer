@@ -5,25 +5,25 @@
 * Controller of the angularApp
 */
 angular.module('angularjsTimerExample')
-  .controller('MainController', function ($scope, timer) {
+  .controller('TimersController', function ($scope, timer) {
 
-    $scope.timer = new timer();
+    $scope.timer1 = new timer();
     $scope.timer2 = new timer();
 
-    $scope.onStartTimer = function() {
-    	$scope.timer.start();
+    $scope.onStartTimer1 = function() {
+    	$scope.timer1.start();
     }
 
-    $scope.onStopTimer = function() {
-    	$scope.timer.stop();
+    $scope.onStopTimer1 = function() {
+    	$scope.timer1.stop();
     }
 
-    $scope.onResetTimer = function() {
-    	$scope.timer.reset();
+    $scope.onResetTimer1 = function() {
+    	$scope.timer1.reset();
     }
 
-    $scope.onRestartTimer = function() {
-    	$scope.timer2.restart();
+    $scope.onRestartTimer1 = function() {
+    	$scope.timer1.restart();
     }
 
     $scope.onStartTimer2 = function() {

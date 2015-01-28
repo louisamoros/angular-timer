@@ -1,5 +1,5 @@
 /**
- * angularjs-timer - v0.0.0 - 2015-01-26 10:55 PM
+ * angularjs-timer - v0.0.0 - 2015-01-27 8:24 PM
  * https://github.com/louisamoros/angular-timer
  *
  * Copyright (c) 2015 Louis Amoros
@@ -18,7 +18,7 @@ angular
         count: '=',
         format: '='
       },
-      template: '<h3>{{count}}</h3>',
+      template: '<div style="font-size:25px;">{{count}}</div>',
       link: function(scope, element, attrs, controller) {
 
       }
