@@ -1,4 +1,4 @@
-//'use strict';
+// 'use strict';
 
 angular
 .module('angularjs-timer-service', [])
@@ -8,12 +8,10 @@ angular
 
     function Timer( offset, countdown ) {
       //Store properties
-      this._offset = ( offset || 0 )
+      this._offset = ( offset || 0 );
       this._count = this._offset;
       this._running = false;
       this._countdown = ( countdown !== false );
-      console.log('timer this inside service');
-      console.log(this);
     }
 
     // Define the instance methods.

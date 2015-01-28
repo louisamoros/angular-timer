@@ -1,5 +1,5 @@
 /**
- * angularjs-timer - v0.0.0 - 2015-01-27 8:52 PM
+ * angularjs-timer - v0.0.0 - 2015-01-27 10:40 PM
  * https://github.com/louisamoros/angular-timer
  *
  * Copyright (c) 2015 Louis Amoros
@@ -16,17 +16,24 @@ angular
       restrict: 'AEC',
       scope: {
         count: '=',
-        format: '='
+        format: '=',
+        type: '='
       },
-      template: '<div style="font-size:25px;">{{count}}</div>',
+      template:'<div ng-include="getContentUrl()"></div>',
       link: function(scope, element, attrs, controller) {
-
+        scope.getContentUrl = function () {
+          if( typeof scope.type === 'undefined' ) {
+            return 'app/template/timer-classic.html';
+          } else {
+            return 'app/template/timer-' + scope.type + '.html';
+          }
+        };
       }
     };
   }
 );
 
-//'use strict';
+// 'use strict';
 
 angular
 .module('angularjs-timer-service', [])
@@ -34,13 +41,12 @@ angular
   'timer',
   function( $interval ) {
 
-    function Timer( count, running, countdown ) {
+    function Timer( offset, countdown ) {
       //Store properties
-      this._count = ( count || 0 );
+      this._offset = ( offset || 0 );
+      this._count = this._offset;
       this._running = false;
       this._countdown = ( countdown !== false );
-      console.log('timer this inside service');
-      console.log(this);
     }
 
     // Define the instance methods.
@@ -58,7 +64,7 @@ angular
       // Stop (if it is running) and put the counter to 0.
       reset: function() {
         this.stop();
-        this._count = ( count || 0 );
+        this._count = this._offset;
       },
 
       // Start the timer.
@@ -98,8 +104,8 @@ angular
 
     // Create a factory that will call the constructor. This will simplify
     // the calling context.
-    function timerFactory( count, running, countdown ) {
-      return( new Timer( count, running, countdown ) );
+    function timerFactory( offset, countdown ) {
+      return( new Timer( offset, countdown ) );
     }
 
     // Store the actual constructor as a factory property so that it is still
