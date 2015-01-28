@@ -7,8 +7,8 @@
 angular.module('angularjsTimerExample')
   .controller('TimersController', function ($scope, timer) {
 
-    $scope.timer1 = new timer();
-    $scope.timer2 = new timer();
+    $scope.timer1 = new timer( 0, false );
+    $scope.timer2 = new timer( 0, false );
 
     $scope.onStartTimer1 = function() {
     	$scope.timer1.start();
