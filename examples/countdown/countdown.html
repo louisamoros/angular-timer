@@ -1,20 +1,9 @@
-> simple timer
+<h4>Countdown</h4>
 <div class="well well-sm text-center">
-  <ng-timer count="timer._count" format="HHMMSS"></ng-timer>
-  <ng-timer count="timer._count" format="HHMMSS"></ng-timer>
+  <ng-timer count="countdown._count" format="HHMMSS"></ng-timer>
 
-  <button ng-click="onRestartTimer()" class="btn btn-primary glyphicon glyphicon-repeat"></button>
-  <button ng-click="onResetTimer()" class="btn btn-primary glyphicon glyphicon-stop"></button>
-  <button ng-click="onStartTimer()" class="btn btn-primary glyphicon glyphicon-play"></button>
-  <button ng-click="onStopTimer()" class="btn btn-primary glyphicon glyphicon-pause"></button>
-</div>
-
-
-> simple timer (independent)
-<div class="well well-sm text-center">
-  <ng-timer count="timer2._count" format="HHMMSS"></ng-timer>
-  <button ng-click="onRestartTimer2()" class="btn btn-primary glyphicon glyphicon-repeat"></button>
-  <button ng-click="onResetTimer2()" class="btn btn-primary glyphicon glyphicon-stop"></button>
-  <button ng-click="onStartTimer2()" class="btn btn-primary glyphicon glyphicon-play"></button>
-  <button ng-click="onStopTimer2()" class="btn btn-primary glyphicon glyphicon-pause"></button>
+  <button ng-click="onRestartCountdown()" class="btn btn-primary glyphicon glyphicon-repeat"></button>
+  <button ng-click="onResetCountdown()" class="btn btn-primary glyphicon glyphicon-stop"></button>
+  <button ng-click="onStartCountdown()" class="btn btn-primary glyphicon glyphicon-play"></button>
+  <button ng-click="onStopCountdown()" class="btn btn-primary glyphicon glyphicon-pause"></button>
 </div>

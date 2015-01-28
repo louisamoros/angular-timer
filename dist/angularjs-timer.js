@@ -1,5 +1,5 @@
 /**
- * angularjs-timer - v0.0.0 - 2015-01-27 8:24 PM
+ * angularjs-timer - v0.0.0 - 2015-01-27 8:46 PM
  * https://github.com/louisamoros/angular-timer
  *
  * Copyright (c) 2015 Louis Amoros
@@ -34,12 +34,13 @@ angular
   'timer',
   function( $interval ) {
 
-    // Provide a simple wrapper around the core $timeout that allows for
-    // the timer to be easily reset.
-    function Timer( invokeApply ) {
+    function Timer( count, running, countdown ) {
       //Store properties
-      this._count = 0;
-      this._running = false;
+      this._count = ( count || 0 );
+      this._running = ( running !== false );
+      this._countdown = ( countdown !== false );
+      console.log('timer this inside service');
+      console.log(this);
     }
 
     // Define the instance methods.
@@ -65,13 +66,24 @@ angular
         var self = this;
         // See $interval angular service documentation
         if ( !this._running ) {
-          this._timer = $interval(
-            function count() {
-              self._count++;
-            },
-            1,
-            0
-          );
+          // If not countdown
+          if ( !this._countdown ) {
+            this._timer = $interval(
+              function count() {
+                self._count++;
+              },
+              1,
+              0
+            );
+          } else {
+            this._timer = $interval(
+              function count() {
+                self._count--;
+              },
+              1,
+              0
+            );
+          }
           this._running = true;
         }
       },
@@ -86,8 +98,8 @@ angular
 
     // Create a factory that will call the constructor. This will simplify
     // the calling context.
-    function timerFactory( invokeApply ) {
-      return( new Timer( invokeApply ) );
+    function timerFactory( count, running, countdown ) {
+      return( new Timer( count, running, countdown ) );
     }
 
     // Store the actual constructor as a factory property so that it is still
