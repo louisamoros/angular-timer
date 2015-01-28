@@ -6,10 +6,11 @@ angular
   'timer',
   function( $interval ) {
 
-    function Timer( count, running, countdown ) {
+    function Timer( offset, countdown ) {
       //Store properties
-      this._count = ( count || 0 );
-      this._running = ( running !== false );
+      this._offset = ( offset || 0 )
+      this._count = this._offset;
+      this._running = false;
       this._countdown = ( countdown !== false );
       console.log('timer this inside service');
       console.log(this);
@@ -30,7 +31,7 @@ angular
       // Stop (if it is running) and put the counter to 0.
       reset: function() {
         this.stop();
-        this._count = 0;
+        this._count = this._offset;
       },
 
       // Start the timer.
@@ -70,8 +71,8 @@ angular
 
     // Create a factory that will call the constructor. This will simplify
     // the calling context.
-    function timerFactory( count, running, countdown ) {
-      return( new Timer( count, running, countdown ) );
+    function timerFactory( offset, countdown ) {
+      return( new Timer( offset, countdown ) );
     }
 
     // Store the actual constructor as a factory property so that it is still

@@ -1,5 +1,5 @@
 /**
- * angularjs-timer - v0.0.0 - 2015-01-27 8:46 PM
+ * angularjs-timer - v0.0.0 - 2015-01-27 8:52 PM
  * https://github.com/louisamoros/angular-timer
  *
  * Copyright (c) 2015 Louis Amoros
@@ -37,7 +37,7 @@ angular
     function Timer( count, running, countdown ) {
       //Store properties
       this._count = ( count || 0 );
-      this._running = ( running !== false );
+      this._running = false;
       this._countdown = ( countdown !== false );
       console.log('timer this inside service');
       console.log(this);
@@ -58,7 +58,7 @@ angular
       // Stop (if it is running) and put the counter to 0.
       reset: function() {
         this.stop();
-        this._count = 0;
+        this._count = ( count || 0 );
       },
 
       // Start the timer.

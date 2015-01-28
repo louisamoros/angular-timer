@@ -7,7 +7,7 @@
 angular.module('angularjsTimerExample')
   .controller('CountdownController', function ($scope, timer) {
 
-    $scope.countdown = new timer();
+    $scope.countdown = new timer( 1000, true);
 
     $scope.onStartCountdown = function() {
     	$scope.countdown.start();
