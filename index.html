@@ -40,15 +40,22 @@
       <h3>How to install</h3>
       <p>Here goes different ways to install...</p>
       <p>Bower install...</p>
-      Examples:
-      <ul>
-        <li><a ng-href="#/">Timer</a></li>
-        <li><a ng-href="#/timers">Timers</a></li>
-        <li><a ng-href="#/countdown">Countdown</a></li>
-      </ul>
 
-      <h3>How to use</h3>
-      <div ng-view=""></div>
+      <h3>How to use - timer service</h3>
+      <!-- Simple timer -->
+      <div ng-include="'examples/timer/timer.html'" ng-controller='TimerController'></div>
+      <!-- Simple timers -->
+      <div ng-include="'examples/timers/timers.html'" ng-controller='TimersController'></div>
+      <!-- Simple countdown -->
+      <div ng-include="'examples/countdown/countdown.html'" ng-controller='CountdownController'></div>
+
+      <h3>How to use - timer directive</h3>
+      <!-- Simple timer display -->
+      timer display...
+      <!-- <div ng-include="'examples/timer-display/timer-display.html'" ng-controller='TimerDisplayController'></div> -->
+      <!-- Simple timer circle -->
+      timer circle...
+      <!-- <div ng-include="'examples/timer-circle/timer-circle.html'" ng-controller='TimerCircleController'></div> -->
     </section>
   </div>
 

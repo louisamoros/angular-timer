@@ -1,9 +1,11 @@
-<h4>Countdown</h4>
-<div class="well well-sm text-center">
-  <ng-timer count="countdown._count" format="HHMMSS"></ng-timer>
-
-  <button ng-click="onRestartCountdown()" class="btn btn-primary glyphicon glyphicon-repeat"></button>
-  <button ng-click="onResetCountdown()" class="btn btn-primary glyphicon glyphicon-stop"></button>
-  <button ng-click="onStartCountdown()" class="btn btn-primary glyphicon glyphicon-play"></button>
-  <button ng-click="onStopCountdown()" class="btn btn-primary glyphicon glyphicon-pause"></button>
+<div class="well well-sm">
+  <h4>Countdown</h4>
+  <p>Possible to convert timer to countdown.</p>
+  <div class="text-center">
+    <ng-timer count="countdown._count"></ng-timer>
+    <button ng-click="onRestartCountdown()" class="btn btn-primary glyphicon glyphicon-repeat"></button>
+    <button ng-click="onResetCountdown()" class="btn btn-primary glyphicon glyphicon-stop"></button>
+    <button ng-click="onStartCountdown()" class="btn btn-primary glyphicon glyphicon-play"></button>
+    <button ng-click="onStopCountdown()" class="btn btn-primary glyphicon glyphicon-pause"></button>
+  </div>
 </div>
