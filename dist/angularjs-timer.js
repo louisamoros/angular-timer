@@ -1,5 +1,5 @@
 /**
- * angularjs-timer - v0.0.0 - 2015-01-28 9:25 PM
+ * angularjs-timer - v0.0.0 - 2015-01-28 9:59 PM
  * https://github.com/louisamoros/angular-timer
  *
  * Copyright (c) 2015 Louis Amoros
@@ -28,8 +28,6 @@ angular
             return 'app/template/timer-' + scope.type + '.html';
           }
         };
-
-
       }
     };
   }
@@ -37,8 +35,8 @@ angular
 .filter(
   'readableTime',
    function() {
-  return function ( seconds ) {
     var day, format, hour, minute, month, week, year;
+  return function ( seconds ) {
     seconds = parseInt(seconds, 10);
     minute = 60;
     hour = minute * 60;
@@ -47,22 +45,22 @@ angular
     year = day * 365;
     month = year / 12;
     format = function(number, string) {
-      string = number === 1 ? string : "" + string + "s";
-      return "" + number + " " + string;
+      string = number === 1 ? string : "" + string + "";
+      return "" + number + "" + string;
     };
     switch (false) {
       case (seconds >= minute):
-        return format(seconds, 'second');
+        return format(seconds, '\'');
         case (seconds >= hour):
-          return format(Math.floor(seconds / minute), 'minute');
+          return format(Math.floor(seconds / minute), '"');
           case (seconds >= day):
-            return format(Math.floor(seconds / hour), 'hour');
+            return format(Math.floor(seconds / hour), 'h');
             case (seconds >= week):
-              return format(Math.floor(seconds / day), 'day');
+              return format(Math.floor(seconds / day), 'd');
               case (seconds >= month):
-                return format(Math.floor(seconds / week), 'week');
+                return format(Math.floor(seconds / week), 'w');
                 case (seconds >= year):
-                  return format(Math.floor(seconds / month), 'month');
+                  return format(Math.floor(seconds / month), 'mth');
                   default:
                     return format(Math.floor(seconds / year), 'year');
                   }
@@ -115,7 +113,7 @@ angular
               function count() {
                 self._count++;
               },
-              1,
+              1000,
               0
             );
           } else {
@@ -123,7 +121,7 @@ angular
               function count() {
                 self._count--;
               },
-              1,
+              1000,
               0
             );
           }

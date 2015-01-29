@@ -43,7 +43,7 @@ angular
               function count() {
                 self._count++;
               },
-              1,
+              1000,
               0
             );
           } else {
@@ -51,7 +51,7 @@ angular
               function count() {
                 self._count--;
               },
-              1,
+              1000,
               0
             );
           }

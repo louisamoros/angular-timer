@@ -7,13 +7,13 @@
 angular.module('angularjsTimerExample')
   .controller('CountdownController', function ($scope, timer) {
 
-    $scope.countdown = new timer( 1000, true);
+    $scope.countdown = new timer( 60, true);
 
     $scope.onStartCountdown = function() {
     	$scope.countdown.start();
     }
 
-    $scope.onStopCoundown = function() {
+    $scope.onStopCountdown = function() {
     	$scope.countdown.stop();
     }
 
