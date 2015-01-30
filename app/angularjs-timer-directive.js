@@ -8,7 +8,7 @@ angular
     return {
       restrict: 'AEC',
       scope: {
-        count: '=',
+        timer: '=',
         format: '=',
         type: '@'
       },

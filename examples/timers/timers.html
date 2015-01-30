@@ -1,14 +1,14 @@
 <div class="well well-sm">
   <h4>Timers</h4>
-  <p>Easy to use many independant timers at the same time.</p>
+  <p>Easy to use many independant timers.</p>
   <div class="text-center">
-    <ng-timer count="timer1._count"></ng-timer>
+    <ng-timer timer="timer1"></ng-timer>
     <button ng-click="onRestartTimer1()" class="btn btn-primary glyphicon glyphicon-repeat"></button>
     <button ng-click="onResetTimer1()" class="btn btn-primary glyphicon glyphicon-stop"></button>
     <button ng-click="onStartTimer1()" class="btn btn-primary glyphicon glyphicon-play"></button>
     <button ng-click="onStopTimer1()" class="btn btn-primary glyphicon glyphicon-pause"></button>
 
-    <ng-timer count="timer2._count"></ng-timer>
+    <ng-timer timer="timer2"></ng-timer>
     <button ng-click="onRestartTimer2()" class="btn btn-success glyphicon glyphicon-repeat"></button>
     <button ng-click="onResetTimer2()" class="btn btn-success glyphicon glyphicon-stop"></button>
     <button ng-click="onStartTimer2()" class="btn btn-success glyphicon glyphicon-play"></button>

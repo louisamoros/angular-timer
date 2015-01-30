@@ -1,5 +1,5 @@
 /**
- * angularjs-timer - v0.0.0 - 2015-01-29 10:40 PM
+ * angularjs-timer - v0.0.0 - 2015-01-29 10:49 PM
  * https://github.com/louisamoros/angular-timer
  *
  * Copyright (c) 2015 Louis Amoros
@@ -15,7 +15,7 @@ angular
     return {
       restrict: 'AEC',
       scope: {
-        count: '=',
+        timer: '=',
         format: '=',
         type: '@'
       },

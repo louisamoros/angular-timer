@@ -24,7 +24,7 @@
 .loader {
 	font-size: 11px;
 	text-indent: -99999em;
-	margin: 5em auto;
+	margin: 1em auto;
 	position: relative;
 	width: 10em;
 	height: 10em;
@@ -62,6 +62,15 @@
 		transform: rotate(360deg);
 	}
 }
+.timer-circle-hidden {
+	visibility: hidden;
+}
+.time-circle {
+	position: relative;
+	margin-bottom: -4em;
+	margin-top: 2em;
+	font-size: 21px;
+}
 </style>
-<div class="loader"></div>
-<div style="font-size:25px;">{{count | readableTime}}</div>
+<div class="time-circle">{{timer._count | readableTime}}</div>
+<div class="loader" ng-class="{'timer-circle-hidden':!timer._running}"></div>
