@@ -10,7 +10,7 @@ angular
       scope: {
         count: '=',
         format: '=',
-        type: '='
+        type: '@'
       },
       template:'<div ng-include="getContentUrl()"></div>',
       link: function(scope, element, attrs, controller) {

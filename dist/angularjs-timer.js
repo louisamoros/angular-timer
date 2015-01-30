@@ -1,5 +1,5 @@
 /**
- * angularjs-timer - v0.0.0 - 2015-01-28 10:16 PM
+ * angularjs-timer - v0.0.0 - 2015-01-29 10:40 PM
  * https://github.com/louisamoros/angular-timer
  *
  * Copyright (c) 2015 Louis Amoros
@@ -17,7 +17,7 @@ angular
       scope: {
         count: '=',
         format: '=',
-        type: '='
+        type: '@'
       },
       template:'<div ng-include="getContentUrl()"></div>',
       link: function(scope, element, attrs, controller) {
